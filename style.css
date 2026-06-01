@@ -88,11 +88,11 @@ section
 }
 
 /* Light Sides */
-.text-side
+.text-side,
+.image-side
 {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 60px;
+    min-height: auto;
+}
     display: flex;
     flex-direction: column;
     justify-content: center;
