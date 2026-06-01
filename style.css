@@ -78,8 +78,11 @@ section
     flex: 1;
     align-items: stretch;
 }
-.text-side,
-.image-side
+/* Only make the home split-container and its sides full-height
+   so other sections (skills, contact) size to their content. */
+#home .split-container,
+#home .text-side,
+#home .image-side
 {
     min-height: 100%;
 }
