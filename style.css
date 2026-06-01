@@ -107,6 +107,13 @@ nav a:hover
     padding:60px 20px;
     text-align:center;
 }
+.split-image-container
+{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
 .hero-image img
 {
     width:260px;
@@ -116,16 +123,19 @@ nav a:hover
     border:none;
     margin-bottom:20px;
 }
-.hero-image::after
+.profile-caption h3
 {
-    content:"Johann Benedict U.\A Pfleider\A\A Web Developer";
-    white-space:pre-wrap;
     font-size:2rem;
     font-weight:bold;
     color:#000000;
-    display:block;
-    margin-bottom:20px;
     line-height:1.2;
+    margin-bottom:8px;
+}
+.profile-caption p
+{
+    font-size:1.3rem;
+    font-weight:bold;
+    color:#000000;
 }
 .hero-actions
 {
@@ -161,48 +171,62 @@ nav a:hover
 }
 section:not(#home)
 {
-    padding:100px 60px;
+    min-height:100vh;
     width:100vw;
-    margin:0 auto;
+    display:flex;
+}
+.page-container
+{
+    display:flex;
+    width:100vw;
+    min-height:100vh;
+}
+.content-panel
+{
+    flex:1;
+    background-color:#ffffff;
+    padding:120px 60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.design-panel
+{
+    flex:1;
+    background-color:#b5b5b5;
+}
+.inverted-layout .content-panel
+{
+    background-color:#b5b5b5;
+}
+.inverted-layout .design-panel
+{
+    background-color:#ffffff;
 }
 section h2
 {
-    font-size:2.8rem;
+    font-size:3.2rem;
     font-weight:bold;
     margin-bottom:25px;
+    color:#2c2c2c;
+}
+.inverted-layout h2
+{
+    color:#000000;
 }
 section p
 {
     font-size:1.1rem;
     font-weight:bold;
     line-height:1.5;
-    max-width:800px;
-    padding-left:0;
+    max-width:500px;
+    color:#000000;
 }
 section ul
 {
     list-style-type:none;
-    padding-left:0;
 }
-#about
-{
-    background-color:#ffffff;
-}
-#about h2,
-#about p
-{
-    color:#2c2c2c;
-}
-#skills
-{
-    background-color:#b5b5b5;
-}
-#skills h2,
-#skills p
-{
-    color:#000000;
-}
-#skills ul li
+section ul li
 {
     font-size:1.2rem;
     font-weight:bold;
@@ -212,45 +236,33 @@ section ul
     padding:12px 30px;
     margin-right:15px;
     margin-bottom:15px;
-    transition:background-color 0.2s ease;
-}
-#skills ul li:hover
-{
-    background-color:#ffffff;
-    color:#2c2c2c;
-}
-#portfolio
-{
-    background-color:#ffffff;
-}
-#portfolio h2,
-#portfolio p
-{
-    color:#2c2c2c;
-}
-#contact
-{
-    background-color:#b5b5b5;
-    min-height:40vh;
-}
-#contact h2,
-#contact p
-{
-    color:#000000;
 }
 @media (max-width: 900px)
 {
-    .hero-container
+    .hero-container,
+    .page-container
     {
         flex-direction:column;
     }
-    .hero-text, .hero-image
+    .inverted-layout
+    {
+        flex-direction:column-reverse;
+    }
+    .hero-text, 
+    .hero-image,
+    .content-panel,
+    .design-panel
     {
         flex:none;
         width:100%;
         padding:60px 30px;
     }
-    .hero-text h1
+    .design-panel
+    {
+        height:200px;
+    }
+    .hero-text h1,
+    section h2
     {
         font-size:2.5rem;
     }
@@ -264,11 +276,7 @@ section ul
     {
         width:100%;
     }
-    section:not(#home)
-    {
-        padding:60px 30px;
-    }
-    #skills ul li
+    section ul li
     {
         display:block;
         width:100%;
