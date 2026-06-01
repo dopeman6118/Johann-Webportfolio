@@ -55,18 +55,20 @@ nav a:hover
 {
     border-bottom:2px solid #ffffff;
 }
-#home
+section
 {
     padding-top:45px;
     min-height:100vh;
+    width:100vw;
+    display:flex;
 }
-.hero-container
+.split-container
 {
     display:flex;
     width:100vw;
     min-height:calc(100vh - 45px);
 }
-.hero-text
+.text-side
 {
     flex:1;
     background-color:#ffffff;
@@ -75,28 +77,30 @@ nav a:hover
     flex-direction:column;
     justify-content:center;
 }
-.hero-text p:first-child,
-.hero-text h2
-{
-    display:none;
-}
-.hero-text h1
+.text-side h1
 {
     font-size:3.2rem;
     font-weight:bold;
     color:#2c2c2c;
     margin-bottom:25px;
 }
-.hero-text p
+.text-side h2
+{
+    font-size:3.2rem;
+    font-weight:bold;
+    color:#2c2c2c;
+    margin-bottom:25px;
+}
+.text-side p
 {
     font-size:1.1rem;
     font-weight:bold;
     line-height:1.5;
     color:#000000;
     max-width:500px;
-    margin-bottom:80px;
+    margin-bottom:40px;
 }
-.hero-image
+.image-side
 {
     flex:1;
     background-color:#b5b5b5;
@@ -107,14 +111,7 @@ nav a:hover
     padding:60px 20px;
     text-align:center;
 }
-.split-image-container
-{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-}
-.hero-image img
+.graphic-box img
 {
     width:260px;
     height:260px;
@@ -123,27 +120,27 @@ nav a:hover
     border:none;
     margin-bottom:20px;
 }
-.profile-caption h3
+.graphic-box h2
 {
     font-size:2rem;
     font-weight:bold;
     color:#000000;
+    margin-bottom:10px;
     line-height:1.2;
-    margin-bottom:8px;
 }
-.profile-caption p
+.graphic-box h3
 {
     font-size:1.3rem;
     font-weight:bold;
     color:#000000;
 }
-.hero-actions
+.actions-wrapper
 {
     display:flex;
     gap:35px;
     align-items:center;
 }
-.hero-actions button
+.actions-wrapper button
 {
     background-color:#2c2c2c;
     color:#ffffff;
@@ -155,78 +152,38 @@ nav a:hover
     min-width:180px;
     transition:background-color 0.2s ease;
 }
-.hero-actions button:hover
+.actions-wrapper button:hover
 {
     background-color:#1a1a1a;
 }
-.hero-actions a:last-child img
+.social-icon img
 {
-    filter:invert(0);
-    margin-left:10px;
+    width:30px;
+    height:30px;
     transition:transform 0.2s ease;
 }
-.hero-actions a:last-child img:hover
+.social-icon img:hover
 {
     transform:scale(1.1);
 }
-section:not(#home)
-{
-    min-height:100vh;
-    width:100vw;
-    display:flex;
-}
-.page-container
-{
-    display:flex;
-    width:100vw;
-    min-height:100vh;
-}
-.content-panel
-{
-    flex:1;
-    background-color:#ffffff;
-    padding:120px 60px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-.design-panel
-{
-    flex:1;
-    background-color:#b5b5b5;
-}
-.inverted-layout .content-panel
+.panel-inverted .text-side
 {
     background-color:#b5b5b5;
 }
-.inverted-layout .design-panel
+.panel-inverted .text-side h2,
+.panel-inverted .text-side p
+{
+    color:#000000;
+}
+.panel-inverted .image-side
 {
     background-color:#ffffff;
 }
-section h2
-{
-    font-size:3.2rem;
-    font-weight:bold;
-    margin-bottom:25px;
-    color:#2c2c2c;
-}
-.inverted-layout h2
-{
-    color:#000000;
-}
-section p
-{
-    font-size:1.1rem;
-    font-weight:bold;
-    line-height:1.5;
-    max-width:500px;
-    color:#000000;
-}
-section ul
+.skills-list
 {
     list-style-type:none;
 }
-section ul li
+.skills-list li
 {
     font-size:1.2rem;
     font-weight:bold;
@@ -239,44 +196,41 @@ section ul li
 }
 @media (max-width: 900px)
 {
-    .hero-container,
-    .page-container
+    .split-container
     {
         flex-direction:column;
     }
-    .inverted-layout
+    .panel-inverted
     {
         flex-direction:column-reverse;
     }
-    .hero-text, 
-    .hero-image,
-    .content-panel,
-    .design-panel
+    .text-side, 
+    .image-side
     {
         flex:none;
         width:100%;
         padding:60px 30px;
     }
-    .design-panel
+    .image-side
     {
-        height:200px;
+        min-height:300px;
     }
-    .hero-text h1,
-    section h2
+    .text-side h1,
+    .text-side h2
     {
         font-size:2.5rem;
     }
-    .hero-actions
+    .actions-wrapper
     {
         flex-direction:column;
         gap:15px;
         align-items:flex-start;
     }
-    .hero-actions button
+    .actions-wrapper button
     {
         width:100%;
     }
-    section ul li
+    .skills-list li
     {
         display:block;
         width:100%;
