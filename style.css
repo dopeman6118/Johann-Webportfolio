@@ -1,207 +1,268 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
 }
 body
 {
-    background-color: #ffffff;
-    color: #000000;
-    overflow-x: hidden;
+    background-color:#ffffff;
+    color:#000000;
+    overflow-x:hidden;
 }
 hr
 {
-    border: none;
-    border-top: 1px solid #e2e8f0;
-    margin: 0;
+    border:none;
+    border-top:1px solid #e2e8f0;
+    margin:0;
 }
 header
 {
-    background-color: #404040;
-    padding: 10px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 45px;
+    background-color:#404040;
+    padding:10px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    height:45px;
 }
 .logo
 {
-    color: #ffffff;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
+    color:#ffffff;
+    font-size:1.1rem;
+    letter-spacing:0.5px;
 }
 nav
 {
-    display: flex;
-    gap: 20px;
+    display:flex;
+    gap:20px;
 }
 nav a
 {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.95rem;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 2px;
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:0.95rem;
+    border-bottom:2px solid transparent;
+    padding-bottom:2px;
 }
 nav a:hover
 {
-    border-bottom: 2px solid #ffffff;
+    border-bottom:2px solid #ffffff;
 }
 #home
 {
-    padding-top: 45px;
-    min-height: 100vh;
+    padding-top:45px;
+    min-height:100vh;
 }
 .hero-container
 {
-    display: flex;
-    width: 100vw;
-    min-height: calc(100vh - 45px);
+    display:flex;
+    width:100vw;
+    min-height:calc(100vh - 45px);
 }
 .hero-text
 {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 80px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex:1;
+    background-color:#ffffff;
+    padding:80px 60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 .hero-text p:first-child,
 .hero-text h2
 {
-    display: none;
+    display:none;
 }
 .hero-text h1
 {
-    font-size: 3.2rem;
-    font-weight: bold;
-    color: #2c2c2c;
-    margin-bottom: 25px;
+    font-size:3.2rem;
+    font-weight:bold;
+    color:#2c2c2c;
+    margin-bottom:25px;
 }
 .hero-text p
 {
-    font-size: 1.1rem;
-    font-weight: bold;
-    line-height: 1.5;
-    color: #000000;
-    max-width: 500px;
-    margin-bottom: 80px;
+    font-size:1.1rem;
+    font-weight:bold;
+    line-height:1.5;
+    color:#000000;
+    max-width:500px;
+    margin-bottom:80px;
 }
 .hero-image
 {
-    flex: 1;
-    background-color: #b5b5b5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
-    text-align: center;
+    flex:1;
+    background-color:#b5b5b5;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:60px 20px;
+    text-align:center;
 }
 .hero-image img
 {
-    width: 260px;
-    height: 260px;
-    object-fit: cover;
-    background-color: #ffffff;
-    border: none;
-    margin-bottom: 20px;
+    width:260px;
+    height:260px;
+    object-fit:cover;
+    background-color:#ffffff;
+    border:none;
+    margin-bottom:20px;
 }
 .hero-image::after
 {
-    content: "Johann Benedict U.\A Pfleider\A\A Web Developer";
-    white-space: pre-wrap;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #000000;
-    display: block;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    content:"Johann Benedict U.\A Pfleider\A\A Web Developer";
+    white-space:pre-wrap;
+    font-size:2rem;
+    font-weight:bold;
+    color:#000000;
+    display:block;
+    margin-bottom:20px;
+    line-height:1.2;
 }
 .hero-actions
 {
-    display: flex;
-    gap: 35px;
-    align-items: center;
+    display:flex;
+    gap:35px;
+    align-items:center;
 }
 .hero-actions button
 {
-    background-color: #2c2c2c;
-    color: #ffffff;
-    border: none;
-    padding: 15px 50px;
-    font-size: 0.95rem;
-    font-weight: bold;
-    cursor: pointer;
-    min-width: 180px;
-    transition: background-color 0.2s ease;
+    background-color:#2c2c2c;
+    color:#ffffff;
+    border:none;
+    padding:15px 50px;
+    font-size:0.95rem;
+    font-weight:bold;
+    cursor:pointer;
+    min-width:180px;
+    transition:background-color 0.2s ease;
 }
 .hero-actions button:hover
 {
-    background-color: #1a1a1a;
+    background-color:#1a1a1a;
 }
 .hero-actions a:last-child img
 {
-    filter: invert(0);
-    margin-left: 10px;
-    transition: transform 0.2s ease;
+    filter:invert(0);
+    margin-left:10px;
+    transition:transform 0.2s ease;
 }
 .hero-actions a:last-child img:hover
 {
-    transform: scale(1.1);
+    transform:scale(1.1);
 }
 section:not(#home)
 {
-    padding: 80px 60px;
-    background-color: #ffffff;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding:100px 60px;
+    background-color:#ffffff;
+    width:100vw;
+    margin:0 auto;
 }
 section h2
 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #2c2c2c;
+    font-size:2.8rem;
+    font-weight:bold;
+    margin-bottom:25px;
+    color:#2c2c2c;
 }
-section p, section ul
+section p
 {
-    font-size: 1.1rem;
-    color: #333333;
-    line-height: 1.6;
-    padding-left: 20px;
+    font-size:1.1rem;
+    font-weight:bold;
+    color:#000000;
+    line-height:1.5;
+    max-width:800px;
+    padding-left:0;
+}
+section ul
+{
+    list-style-type:none;
+    padding-left:0;
+}
+section ul li
+{
+    font-size:1.2rem;
+    font-weight:bold;
+    color:#ffffff;
+    background-color:#2c2c2c;
+    display:inline-block;
+    padding:12px 30px;
+    margin-right:15px;
+    margin-bottom:15px;
+    transition:background-color 0.2s ease;
+}
+section ul li:hover
+{
+    background-color:#b5b5b5;
+    color:#000000;
+}
+#about
+{
+    background-color:#ffffff;
+}
+#skills
+{
+    background-color:#b5b5b5;
+}
+#skills h2
+{
+    color:#000000;
+}
+#portfolio
+{
+    background-color:#ffffff;
+}
+#contact
+{
+    background-color:#b5b5b5;
+    min-height:40vh;
+}
+#contact h2, #contact p
+{
+    color:#000000;
 }
 @media (max-width: 900px)
 {
     .hero-container
     {
-        flex-direction: column;
+        flex-direction:column;
     }
     .hero-text, .hero-image
     {
-        flex: none;
-        width: 100%;
-        padding: 60px 30px;
+        flex:none;
+        width:100%;
+        padding:60px 30px;
     }
     .hero-text h1
     {
-        font-size: 2.5rem;
+        font-size:2.5rem;
     }
     .hero-actions
     {
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
     }
     .hero-actions button
     {
-        width: 100%;
+        width:100%;
+    }
+    section:not(#home)
+    {
+        padding:60px 30px;
+    }
+    section ul li
+    {
+        display:block;
+        width:100%;
+        margin-right:0;
     }
 }
