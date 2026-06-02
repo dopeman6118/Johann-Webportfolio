@@ -17,7 +17,7 @@ body
     margin: 0;
     padding-top: 60px;
 }
-.playfair-display
+.playfair-display-custom
 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
