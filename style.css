@@ -60,6 +60,7 @@ section
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     box-sizing: border-box;
     padding: 80px 40px;
@@ -82,8 +83,11 @@ section > *
 {
     display: flex;
     width: 100%;
+    max-width: 1200px;
     flex: 1;
+    gap: 40px;
     align-items: stretch;
+    justify-content: center;
 }
 #home .split-container,
 #home .text-side,
@@ -91,14 +95,26 @@ section > *
 {
     min-height: 100%;
 }
-.text-side,
-.image-side
+section .text-side,
+section .image-side
 {
     flex: 1;
     min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 60px 40px;
+    box-sizing: border-box;
+}
+.section-panel .image-side,
+.section-panel .text-side
+{
+    min-height: auto;
+}
+.section-panel .image-side
+{
+    background-color: #b5b5b5;
+    text-align: center;
 }
 .text-side h1, .text-side h2
 {
