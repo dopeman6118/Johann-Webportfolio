@@ -65,15 +65,19 @@ section
     box-sizing: border-box;
     padding: 80px 40px;
 }
-section > *
+section > *:not(.split-container)
 {
     width: min(1200px, 100%);
+}
+section > .split-container
+{
+    width: 100%;
+    max-width: none;
 }
 #home
 {
     min-height: calc(100vh - 60px);
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
 }
 #home .split-container
 {
