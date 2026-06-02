@@ -55,8 +55,6 @@ nav a:hover
 {
     border-bottom: 2px solid #ffffff;
 }
-
-/* Section Setup - Eliminates weird blank gaps */
 section
 {
     width: 100%;
@@ -78,8 +76,6 @@ section
     flex: 1;
     align-items: stretch;
 }
-/* Only make the home split-container and its sides full-height
-   so other sections (skills, contact) size to their content. */
 #home .split-container,
 #home .text-side,
 #home .image-side
@@ -87,12 +83,11 @@ section
     min-height: 100%;
 }
 
-/* Light Sides */
 .text-side,
 .image-side
 {
-    min-height: auto;
-}
+    flex: 1;
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,8 +108,6 @@ section
     max-width: 550px;
     margin-bottom: 40px;
 }
-
-/* Grey Sides */
 .image-side
 {
     flex: 1;
@@ -126,8 +119,6 @@ section
     padding: 60px 20px;
     text-align: center;
 }
-
-/* Home Page Frame Custom Alignment */
 .graphic-box
 {
     display: flex;
@@ -161,8 +152,6 @@ section
     font-weight: bold;
     color: #000000;
 }
-
-/* Interactive Elements */
 .actions-wrapper
 {
     display: flex;
@@ -196,7 +185,6 @@ section
     transform: scale(1.1);
 }
 
-/* Inversion Engine - Alternates the split colors smoothly down the page */
 .panel-inverted .text-side
 {
     background-color: #b5b5b5;
@@ -210,8 +198,6 @@ section
 {
     background-color: #ffffff;
 }
-
-/* Component Styling */
 .skills-list
 {
     list-style-type: none;
@@ -227,8 +213,6 @@ section
     margin-right: 15px;
     margin-bottom: 15px;
 }
-
-/* Fully Responsive Breakpoint */
 @media (max-width: 900px)
 {
     section
