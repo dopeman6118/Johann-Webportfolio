@@ -87,13 +87,16 @@ section > .split-container
 {
     display: flex;
     width: 100%;
-    max-width: 1200px;
     flex: 1;
     gap: 40px;
     align-items: stretch;
     justify-content: center;
 }
-#home .split-container,
+#home .split-container
+{
+    min-height: 100%;
+    max-width: none;
+}
 #home .text-side,
 #home .image-side
 {
