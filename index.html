@@ -11,76 +11,78 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <strong>JBP.</strong>
-        </div>
+        <div class="logo">JBP.</div>
         <nav>
-            <a href="#home">Home</a> 
-            <a href="#about">About Me</a> 
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
             <a href="#skills">Skills</a>
-            <a href="#portfolio">Projects</a> 
-            <a href="#contact">Contact Me</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <section id="home">
-        <div class="split-container">
-            <div class="text-side">
-                <h1>Johann Benedict U. Pfleider</h1>
-                <p>I am a tech-savvy individual who loves computers and is very interested in them. Currently studying Information Technology in USLS, and I am very interested in web development and making websites.</p>
-                <div class="actions-wrapper">
-                    <a href="#portfolio"><button type="button">My Projects ►</button></a>
-                    <a href="#contact"><button type="button">Contact Me ►</button></a>
-                    <a class="social-icon" href="https://github.com/dopeman6118/Johann-Webportfolio.git" target="_blank" rel="noopener noreferrer">
-                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
-                    </a>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="split-container">
+                <div class="text-side">
+                    <h1>Johann Benedict U. Pfleider</h1>
+                    <p>I am a tech-savvy individual who loves computers. I am currently studying Information Technology at USLS and I am passionate about web development and building websites.</p>
+                    <div class="actions-wrapper">
+                        <a class="button" href="#portfolio">My Projects ►</a>
+                        <a class="button button-secondary" href="#contact">Contact Me ►</a>
+                        <a class="social-icon" href="https://github.com/dopeman6118/Johann-Webportfolio.git" target="_blank" rel="noopener noreferrer">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+                        </a>
+                    </div>
+                </div>
+                <div class="image-side">
+                    <div class="graphic-box">
+                        <img src="./me-picture.jpg" alt="Johann Benedict U. Pfleider Profile">
+                        <h2>Web Developer</h2>
+                        <p>Creating modern and responsive websites.</p>
+                    </div>
                 </div>
             </div>
-            <div class="image-side">
-                <div class="graphic-box">
-                    <img src="./me-picture.jpg" alt="Johann Benedict U. Pfleider Profile">
-                    <h2>Johann Benedict U. Pfleider</h2>
-                    <h3>Web Developer</h3>
+        </section>
+
+        <section id="about" class="panel-inverted">
+            <div class="split-container">
+                <div class="text-side">
+                    <h2>About Me</h2>
+                    <p>I am a passionate student of Information Technology with a strong interest in computers and web development. I enjoy building websites that look great and work well for users.</p>
                 </div>
+                <div class="image-side"></div>
             </div>
-        </div>
-    </section>
-    <section id="about">
-        <div class="split-container">
-            <div class="text-side">
-                <h2>About Me</h2>
-                <p>I am Johann Benedict U. Pfleider, a passionate individual with a strong interest in computers and technology. I am currently studying Information Technology at USLS and have a keen interest in web development and creating engaging websites.</p>
-            </div>
-            <div class="image-side"></div>
-        </div>
-    </section>
-    <section id="skills">
-        <div class="split-container panel-inverted">
-            <div class="image-side"></div>
-            <div class="text-side">
+        </section>
+
+        <section id="skills">
+            <div class="section-inner">
                 <h2>Skills</h2>
                 <ul class="skills-list">
                     <li>C++</li>
-                    <li>UXUI</li>
-                    <li>HTML & CSS Structure</li>
+                    <li>UX/UI</li>
+                    <li>HTML & CSS</li>
                 </ul>
             </div>
-        </div>
-    </section>
-    <section id="portfolio">
-        <div class="split-container">
-            <div class="text-side">
-                <h2>My Projects</h2>
-            </div>
-            <div class="image-side"></div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="split-container panel-inverted">
-            <div class="image-side"></div>
-            <div class="text-side">
-                <h2>Contact Me</h2>
-        </div>
-    </section>
+        </section>
 
+        <section id="portfolio">
+            <div class="section-inner">
+                <h2>My Projects</h2>
+                <p>Explore projects that demonstrate my web development skills and creative approach.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="panel-inverted">
+            <div class="section-inner">
+                <h2>Contact Me</h2>
+                <p>If you'd like to connect, feel free to email me or visit my GitHub profile.</p>
+                <div class="contact-links">
+                    <a href="mailto:hello@example.com">hello@example.com</a>
+                    <a href="https://github.com/dopeman6118/Johann-Webportfolio.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
