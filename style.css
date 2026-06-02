@@ -63,11 +63,13 @@ section
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 80px 40px;
+    padding: 0;
 }
 section > *:not(.split-container)
 {
     width: min(1200px, 100%);
+    padding: 80px 40px;
+    box-sizing: border-box;
 }
 section > .split-container
 {
