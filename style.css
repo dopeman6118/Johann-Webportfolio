@@ -1,4 +1,6 @@
 :root {
+    --header-height: 60px;
+    --section-padding: 80px;
     --bg: #ffffff;
     --surface: #b5b5b5;
     --surface-strong: #404040;
@@ -7,6 +9,7 @@
     --accent: #2c2c2c;
 }
 
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
@@ -22,14 +25,16 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-    padding-top: 60px;
+    padding-top: var(--header-height);
 }
 
+/* Header */
 header {
     position: fixed;
-    inset: 0 0 auto;
-    height: 60px;
-    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
     background: var(--surface-strong);
     display: flex;
     align-items: center;
@@ -62,29 +67,30 @@ nav a:hover {
     opacity: 0.8;
 }
 
+/* Layout */
 main {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.section-inner,
+section {
+    padding: var(--section-padding) 0;
+}
+
+.section-inner {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
 .split-container {
     width: min(1200px, 100%);
     margin: 0 auto;
-    padding: 80px 40px;
-}
-
-.hero {
-    min-height: calc(100vh - 60px);
-    display: flex;
-    align-items: center;
-}
-
-.split-container {
     display: flex;
     gap: 40px;
     align-items: center;
     justify-content: center;
+    padding: 0 40px;
 }
 
 .text-side,
@@ -95,6 +101,10 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 40px;
+}
+
+.text-side {
+    max-width: 700px;
 }
 
 .text-side h1,
@@ -128,6 +138,13 @@ main {
     background: var(--bg);
 }
 
+/* Hero */
+.hero {
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+}
+
 .graphic-box {
     display: flex;
     flex-direction: column;
@@ -149,6 +166,7 @@ main {
     color: var(--text-strong);
 }
 
+/* Buttons and actions */
 .actions-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -192,6 +210,7 @@ main {
     transform: scale(1.1);
 }
 
+/* Skills */
 .skills-list {
     display: grid;
     gap: 24px;
@@ -248,6 +267,7 @@ main {
     font-size: 0.95rem;
 }
 
+/* Contact links */
 .contact-links {
     display: flex;
     flex-wrap: wrap;
@@ -262,6 +282,7 @@ main {
     border-radius: 8px;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
     header {
         padding: 0 20px;
@@ -269,7 +290,7 @@ main {
 
     .section-inner,
     .split-container {
-        padding: 50px 24px;
+        padding: 0 24px;
     }
 
     .split-container,
@@ -299,6 +320,6 @@ main {
     }
 
     .skills-list {
-        flex-direction: column;
+        gap: 20px;
     }
 }
