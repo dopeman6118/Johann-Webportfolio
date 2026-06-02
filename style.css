@@ -17,6 +17,12 @@ body
     margin: 0;
     padding-top: 60px;
 }
+playfair-display
++ {
++   font-family: "Playfair Display", serif;
++   font-optical-sizing: auto;
++   font-weight: 400;
+}
 header
 {
     background-color: #404040;
