@@ -149,8 +149,6 @@ section {
     align-items: center;
     position: relative;
     overflow: hidden;
-    background: radial-gradient(circle at top left, rgba(79, 111, 156, 0.14), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(217, 119, 6, 0.12), transparent 30%);
 }
 
 .hero-shape {
